@@ -27,14 +27,15 @@ body{
     width: 100%;
     height: var(--tools--bar--height);
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 16px;
     align-items: center;
     background-color: rgb(206, 50, 50);
     border-radius: var(--border-radius);
     padding: var(--wrapper--padding);
 }
 
-.tools-bar .shapes{
+.tools-bar .shapes, .tool{
     background-color: white;
     padding: var(--wrapper--padding);
     border-radius: var(--border-radius);
@@ -44,6 +45,14 @@ body{
     align-items: center;
     flex-direction: column;
     gap: 4px;
+}
+
+.tools-bar .options .option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-direction: row;
 }
 
 .wrapper .drawing-board{
