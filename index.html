@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Paint | By Abdel.</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <section class="tools-bar">
-            <div class="shapes tool">
-                <div class="shape-icon">
-                    <img src="res/rectangle.svg" alt="">
-                </div>
-                <div class="shape-icon">
-                    <img src="res/circle.svg" alt="">
-                </div>
-                <div class="shape-icon">
-                    <img src="res/triangle.svg" alt="">
-                </div>
-            </div>
+      <section class="tools-bar">
+        <div class="shapes tool">
+          <div class="shape-icon">
+            <img src="res/rectangle.svg" alt="" />
+          </div>
+          <div class="shape-icon">
+            <img src="res/circle.svg" alt="" />
+          </div>
+          <div class="shape-icon">
+            <img src="res/triangle.svg" alt="" />
+          </div>
+        </div>
 
-            <div class="options tool">
-                <div class="option brush">
-                    <img src="res/brush.svg" alt="">
-                    <label>Brush</label>
-                </div>
-                <div class="option eraser">
-                    <img src="res/eraser.svg" alt="">
-                    <label>Eraser</label>
-                </div>
-                <div class="option range">
-                    <input type="range" min="1" max="100" value="1">
-                    </div>
+        <div class="options tool">
+          <div class="option brush">
+            <img src="res/brush.svg" alt="" />
+            <label>Brush</label>
+          </div>
+          <div class="option eraser">
+            <img src="res/eraser.svg" alt="" />
+            <label>Eraser</label>
+          </div>
+          <div class="option range">
+            <input type="range" min="1" max="100" value="1" />
+          </div>
+        </div>
+
+        <div class="colors tool">
+            <div class="color">
+                <span class="color-icon" style="background-color: #000;"></span>
             </div>
-        </section>
-        <section class="drawing-board">
-            <canvas id="canvas" width="500" height="500"></canvas>
-        </section>
+            <div class="color">
+                <span class="color-icon" style="background-color: rgb(78, 50, 238);"></span>
+            </div>
+            <div class="color">
+                <span class="color-icon" style="background-color: #f00;"></span>
+            </div>
+            <div class="color">
+                <span class="color-icon" style="background-color: #0f0;"></span>
+            </div>
+            <div class="color">
+                <span class="color-icon" style="background-color: #000;"></span>
+            </div>
+            <div class="color">
+                <span class="color-icon" style="background-color: rgb(78, 50, 238);"></span>
+            </div>
+            <div class="color">
+                <span class="color-icon" style="background-color: #f00;"></span>
+            </div>
+            <div class="color">
+                <span class="color-icon" style="background-color: #0f0;"></span>
+            </div>
+        </div>
+      </section>
+      <section class="drawing-board">
+        <canvas id="canvas" width="500" height="500"></canvas>
+      </section>
     </div>
-</body>
-
+  </body>
 </html>

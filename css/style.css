@@ -55,6 +55,21 @@ body{
     flex-direction: row;
 }
 
+.colors{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.colors .color span{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    border-radius: 50%;
+}
+
 .wrapper .drawing-board{
     width: 100%;
     height: calc(100vh - var(--tools--bar--height) - var(--wrapper--padding) * 3);
