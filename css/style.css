@@ -1,41 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
 
-:root{
+:root {
     --wrapper--padding: 16px;
     --tools--bar--height: 140px;
     --border-radius: 10px;
 }
 
-body{
-    background-color: black;
+body {
+    background-color: rgb(20, 20, 20);
     overflow: hidden;
+    background-image: url(../res/bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.wrapper{
+.wrapper {
     width: 100vw;
     height: 100vh;
     padding: 16px;
 }
 
-.wrapper .tools-bar{
+.wrapper .tools-bar {
     width: 100%;
     height: var(--tools--bar--height);
     display: flex;
     justify-content: start;
     gap: 16px;
     align-items: center;
-    background-color: rgb(206, 50, 50);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: var(--border-radius);
     padding: var(--wrapper--padding);
 }
 
-.tools-bar .shapes, .tool{
+.tools-bar .shapes,
+.tool {
     background-color: white;
     padding: var(--wrapper--padding);
     border-radius: var(--border-radius);
@@ -47,7 +58,7 @@ body{
     gap: 4px;
 }
 
-.tools-bar .options .option{
+.tools-bar .options .option {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,14 +66,14 @@ body{
     flex-direction: row;
 }
 
-.colors{
+.colors {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
 }
 
-.colors .color span{
+.colors .color span {
     display: flex;
     width: 24px;
     height: 24px;
@@ -70,14 +81,15 @@ body{
     border-radius: 50%;
 }
 
-.manage-canvas{
+.manage-canvas {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.save-canvas-btn, .clear-canvas-btn{
+.save-canvas-btn,
+.clear-canvas-btn {
     background-color: rgb(206, 50, 50);
     color: white;
     border-radius: var(--border-radius);
@@ -89,11 +101,11 @@ body{
     border: none;
 }
 
-.clear-canvas-btn{
+.clear-canvas-btn {
     background-color: aqua;
 }
 
-.wrapper .drawing-board{
+.wrapper .drawing-board {
     width: 100%;
     height: calc(100vh - var(--tools--bar--height) - var(--wrapper--padding) * 3);
     background-color: rgb(255, 255, 255);
