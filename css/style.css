@@ -70,6 +70,29 @@ body{
     border-radius: 50%;
 }
 
+.manage-canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.save-canvas-btn, .clear-canvas-btn{
+    background-color: rgb(206, 50, 50);
+    color: white;
+    border-radius: var(--border-radius);
+    padding: var(--wrapper--padding);
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    width: 200px;
+    border: none;
+}
+
+.clear-canvas-btn{
+    background-color: aqua;
+}
+
 .wrapper .drawing-board{
     width: 100%;
     height: calc(100vh - var(--tools--bar--height) - var(--wrapper--padding) * 3);
