@@ -9,6 +9,7 @@
 :root{
     --wrapper--padding: 16px;
     --tools--bar--height: 140px;
+    --border-radius: 10px;
 }
 
 body{
@@ -29,13 +30,21 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: rgb(206, 50, 50);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
+    padding: var(--wrapper--padding);
+}
+
+.tools-bar .shapes{
+    background-color: white;
+    padding: var(--wrapper--padding);
+    border-radius: var(--border-radius);
+    height: 100%;
 }
 
 .wrapper .drawing-board{
     width: 100%;
     height: calc(100vh - var(--tools--bar--height) - var(--wrapper--padding) * 3);
     background-color: rgb(255, 255, 255);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     margin: 16px 0;
 }
