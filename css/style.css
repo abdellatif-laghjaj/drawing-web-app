@@ -5,3 +5,37 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
+
+:root{
+    --wrapper--padding: 16px;
+    --tools--bar--height: 140px;
+}
+
+body{
+    background-color: black;
+    overflow: hidden;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    padding: 16px;
+}
+
+.wrapper .tools-bar{
+    width: 100%;
+    height: var(--tools--bar--height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(206, 50, 50);
+    border-radius: 10px;
+}
+
+.wrapper .drawing-board{
+    width: 100%;
+    height: calc(100vh - var(--tools--bar--height) - var(--wrapper--padding) * 3);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 16px 0;
+}
