@@ -1,114 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
 }
 
 :root {
-    --wrapper--padding: 16px;
-    --tools--bar--height: 140px;
-    --border-radius: 10px;
+  --wrapper--padding: 16px;
+  --tools--bar--height: 140px;
+  --border-radius: 10px;
 }
 
 body {
-    background-color: rgb(20, 20, 20);
-    overflow: hidden;
-    background-image: url(../res/bg.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-color: rgb(20, 20, 20);
+  overflow: hidden;
+  background-image: url(../res/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .wrapper {
-    width: 100vw;
-    height: 100vh;
-    padding: 16px;
+  width: 100vw;
+  height: 100vh;
+  padding: 16px;
 }
 
 .wrapper .tools-bar {
-    width: 100%;
-    height: var(--tools--bar--height);
-    display: flex;
-    justify-content: start;
-    gap: 16px;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: var(--border-radius);
-    padding: var(--wrapper--padding);
+  width: 100%;
+  height: var(--tools--bar--height);
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--border-radius);
+  padding: var(--wrapper--padding);
 }
 
 .tools-bar .shapes,
 .tool {
-    background-color: white;
-    padding: var(--wrapper--padding);
-    border-radius: var(--border-radius);
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    gap: 4px;
+  background-color: white;
+  padding: var(--wrapper--padding);
+  border-radius: var(--border-radius);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .tools-bar .options .option {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row;
 }
 
 .colors {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
 }
 
 .colors .color span {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    background-color: red;
-    border-radius: 50%;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  border-radius: 50%;
 }
 
 .manage-canvas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.save-canvas-btn,
-.clear-canvas-btn {
-    background-color: rgb(206, 50, 50);
-    color: white;
-    border-radius: var(--border-radius);
-    padding: var(--wrapper--padding);
-    font-size: 1.2rem;
-    cursor: pointer;
-    outline: none;
-    width: 200px;
-    border: none;
+.btn {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  background: #4433ff;
+  z-index: 1;
+}
+
+.btn:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.btn:after {
+  border-radius: 5px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #3a86ff;
+  right: 0;
+}
+
+.btn:active {
+  top: 2px;
 }
 
 .clear-canvas-btn {
-    background-color: aqua;
+  background-color: rgb(255, 51, 51);
+}
+
+.clear-canvas-btn:after{
+    background-color: rgb(255, 137, 122);
 }
 
 .wrapper .drawing-board {
-    width: 100%;
-    height: calc(100vh - var(--tools--bar--height) - var(--wrapper--padding) * 3);
-    background-color: rgb(255, 255, 255);
-    border-radius: var(--border-radius);
-    margin: 16px 0;
+  width: 100%;
+  height: calc(100vh - var(--tools--bar--height) - var(--wrapper--padding) * 3);
+  background-color: rgb(255, 255, 255);
+  border-radius: var(--border-radius);
+  margin: 16px 0;
 }
