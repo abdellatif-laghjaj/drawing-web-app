@@ -28,6 +28,9 @@ const drawCircle = (e) => {
     ctx.stroke();
 }
 
+const drawTriangle = (e) => {
+}
+
 const drawing = (e) => {
     if (!isDrawing) return;
 
