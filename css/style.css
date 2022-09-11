@@ -43,10 +43,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--border-radius);
   padding: var(--wrapper--padding);
+  cursor: pointer;
 }
 
-.tools-bar .shapes,
-.tool {
+.tools-bar .shapes{
   background-color: white;
   padding: var(--wrapper--padding);
   border-radius: var(--border-radius);
@@ -54,9 +54,21 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   gap: 4px;
 }
+
+.tool {
+    background-color: white;
+    padding: var(--wrapper--padding);
+    border-radius: var(--border-radius);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+  }
 
 .tools-bar .options .option {
   display: flex;
